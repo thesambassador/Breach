@@ -35,6 +35,4 @@ Thumbs.db
 # ============ #
 # My stuff     #
 # ============ #
-Assets/BoughtAssets/
-!Assets/BoughtAssets/PlayMaker/Resources
-!Assets/BoughtAssets/PlayMaker/Templates
+/Assets/BoughtAssets/
