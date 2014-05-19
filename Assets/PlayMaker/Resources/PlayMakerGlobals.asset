@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 42938266, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: PlayMakerGlobals
+  m_EditorClassIdentifier: 
+  variables:
+    floatVariables: []
+    intVariables: []
+    boolVariables: []
+    stringVariables: []
+    vector2Variables: []
+    vector3Variables: []
+    colorVariables: []
+    rectVariables: []
+    quaternionVariables: []
+    gameObjectVariables:
+    - useVariable: 1
+      name: g_Camera
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: g_Character
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: g_gui_Inventory
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: g_mgr_Input
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: g_player_LiveAnimation
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: g_tile_TileSystem
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    objectVariables:
+    - useVariable: 1
+      name: g_tile_DisplayedCompositionOnMouse
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      typeName: UnityEngine.Object
+      value: {fileID: 0}
+    materialVariables: []
+    textureVariables: []
+  events:
+  - assfuck
+  - PlayerSelectedQuestChoice
+  - NGUI / ON CLICK
+  - NGUI / ON DOUBLE CLICK
+  - NGUI / ON DRAG
+  - NGUI / ON DRAG FINISHED
+  - NGUI / ON DROP
+  - NGUI / ON HOVER - EXIT
+  - NGUI / ON HOVER - HOVERING
+  - NGUI / ON INPUT
+  - NGUI / ON KEY
+  - NGUI / ON MOUSEWHEEL SCROLL
+  - NGUI / ON PRESS - PRESSED
+  - NGUI / ON PRESS - RELEASED
+  - NGUI / ON SCROLLBAR CHANGE
+  - NGUI / ON SELECT - PRESSED
+  - NGUI / ON SELECT - RELEASED
+  - NGUI / ON SELECTION CHANGE
+  - NGUI / ON SLIDER CHANGE
+  - NGUI / ON SUBMIT
+  - NGUI / ON TOOLTIP - HIDE
+  - NGUI / ON TOOLTIP - SHOW
+  - GenerateQuest
+  - CreateTown
+  - GenerateNewEvent
+  - EnterLimboState
+  - CreateBattle
+  - CreateQuest
+  - GenerateBattle
+  - AttackMob
+  - EnterPlayerComboState
+  - FailedCombo
+  - MobCountering
+  - ResetPlayerCombat
+  - StartBattle
+  - SuccessfulCombo
+  - MobIsCountering
+  - Take Damage
+  - GenerateZone
+  - COLLISION ENTER 2D
+  - COLLISION EXIT 2D
+  - COLLISION STAY 2D
+  - TRIGGER ENTER 2D
+  - TRIGGER EXIT 2D
+  - TRIGGER STAY 2D
+  - ActivateEvent
+  - ColliderTriggerEvent
+  - PlayerIsAttacking
