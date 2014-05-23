@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 529336600, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: atlas_player
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 015bf4631adc2064dae4d4fc587c6700, type: 2}
+  uvs:
+  - serializedVersion: 2
+    x: 0
+    y: .8359375
+    width: .203125
+    height: .140625
+  - serializedVersion: 2
+    x: .78125
+    y: 0
+    width: .109375
+    height: .1015625
+  - serializedVersion: 2
+    x: 0
+    y: .421875
+    width: .1953125
+    height: .40625
+  - serializedVersion: 2
+    x: .359375
+    y: .265625
+    width: .1015625
+    height: .296875
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: .203125
+    height: .4140625
+  - serializedVersion: 2
+    x: .578125
+    y: 0
+    width: .1953125
+    height: .2421875
+  - serializedVersion: 2
+    x: .2109375
+    y: .453125
+    width: .1328125
+    height: .3125
+  - serializedVersion: 2
+    x: .2109375
+    y: 0
+    width: .140625
+    height: .4453125
+  - serializedVersion: 2
+    x: .2109375
+    y: .7734375
+    width: .09375
+    height: .1640625
+  - serializedVersion: 2
+    x: .359375
+    y: 0
+    width: .2109375
+    height: .2578125
+  textureGUIDs:
+  - 218d2a8fb354b33438684ee0673e1bec
+  - 249bfc2f25922af4db44e90dbdea2bea
+  - 36a8435d1a719bd4180d322eb28d5c82
+  - 4ef66f011b1800b499bdfdfa8df043e9
+  - a233551c817af2d49afc7cb5ad92f283
+  - a41fb7877c340444b9ff9626de3d3c7d
+  - af9257aee8d39b946a1e4b9d0b5b2903
+  - bca821b3673557a43b9130b2cf61c02a
+  - e6c9377184a48344c86aca63ff440378
+  - fbfec39de6a6a7f498aaa3ca10265aaa
+  textureSizes:
+  - {x: 26, y: 18}
+  - {x: 14, y: 13}
+  - {x: 25, y: 52}
+  - {x: 13, y: 38}
+  - {x: 26, y: 53}
+  - {x: 25, y: 31}
+  - {x: 17, y: 40}
+  - {x: 18, y: 57}
+  - {x: 12, y: 21}
+  - {x: 27, y: 33}
+  defaultPivotOffsets:
+  - {x: .310714275, y: .324999988}
+  - {x: .021428572, y: -.469230771}
+  - {x: .021971833, y: .302816898}
+  - {x: .0514626205, y: .348591536}
+  - {x: .0358884074, y: -.28873238}
+  - {x: .0160714276, y: -.462269574}
+  - {x: .0994200557, y: .348591536}
+  - {x: -.133802816, y: .394366205}
+  - {x: .0166666675, y: .347619057}
+  - {x: .139285713, y: -.280519485}
+  textureNames:
+  - player_0010_foot
+  - player_0000_neck
+  - player_0003_legupper
+  - player_0008_lowerArm
+  - player_0004_lowerbody
+  - player_0005_upperbody
+  - player_0009_upperArm
+  - player_0002_leglower
+  - player_0007_hand
+  - player_0006_head
+  texturePaths:
+  - Assets/Resources/Atlas Base Textures/player/player_0010_foot.png
+  - Assets/Resources/Atlas Base Textures/player/player_0000_neck.png
+  - Assets/Resources/Atlas Base Textures/player/player_0003_legupper.png
+  - Assets/Resources/Atlas Base Textures/player/player_0008_lowerArm.png
+  - Assets/Resources/Atlas Base Textures/player/player_0004_lowerbody.png
+  - Assets/Resources/Atlas Base Textures/player/player_0005_upperbody.png
+  - Assets/Resources/Atlas Base Textures/player/player_0009_upperArm.png
+  - Assets/Resources/Atlas Base Textures/player/player_0002_leglower.png
+  - Assets/Resources/Atlas Base Textures/player/player_0007_hand.png
+  - Assets/Resources/Atlas Base Textures/player/player_0006_head.png
+  lastBuildID: 20140521182155179
+  needsRebuilt: 0
+  dataVersion: 4
+  maxAtlasSize: 1024
+  padding: 1
+  forceSquare: 0
