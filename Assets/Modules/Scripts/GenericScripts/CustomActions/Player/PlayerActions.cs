@@ -28,8 +28,8 @@ namespace HutongGames.Playmaker.Actions
             float mouseX = mousePos.x;
             float playerX = playerScreenPos.x;
 
-            bool keyRight = Input.GetKey(KeyCode.RightArrow);
-            bool keyLeft = Input.GetKey(KeyCode.LeftArrow);
+            bool keyRight = Input.GetKey(KeyCode.D);
+            bool keyLeft = Input.GetKey(KeyCode.A);
 
             bool movingTowardsMouse = (keyRight && mouseX > playerX) || (keyLeft && mouseX < playerX);
 
@@ -38,7 +38,7 @@ namespace HutongGames.Playmaker.Actions
             if (movingTowardsMouse)
                 runningDir.Value = 1;
 
-            Debug.Log("Test");
+            //Debug.Log("Test");
 
 	    }
     }
