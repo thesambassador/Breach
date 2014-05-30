@@ -23,22 +23,42 @@ MonoBehaviour:
     y: .2421875
     width: .546875
     height: .234375
+  - serializedVersion: 2
+    x: 0
+    y: .484375
+    width: .546875
+    height: .234375
+  - serializedVersion: 2
+    x: 0
+    y: .7265625
+    width: .546875
+    height: .234375
   textureGUIDs:
   - 3fa1b2cb25a676845a2ff029535293fd
   - b1c74463b5ee5eb4788fe62fb91687c1
+  - 404f7847288daa14cbc4864f61062199
+  - 0eb66b9b0239e9d49b5d23e52ce43165
   textureSizes:
+  - {x: 70, y: 30}
+  - {x: 70, y: 30}
   - {x: 70, y: 30}
   - {x: 70, y: 30}
   defaultPivotOffsets:
   - {x: .412499994, y: .0500000007}
   - {x: .412499994, y: .0500000007}
+  - {x: .412499994, y: .0500000007}
+  - {x: .412499994, y: .0500000007}
   textureNames:
   - gun2
   - gun1
+  - noGun
+  - gun3
   texturePaths:
-  - Assets/Atlas Base Textures/guns/gun2.psd
-  - Assets/Atlas Base Textures/guns/gun1.psd
-  lastBuildID: 2014051720202480
+  - Assets/Resources/Atlas Base Textures/guns/gun2.psd
+  - Assets/Resources/Atlas Base Textures/guns/gun1.psd
+  - Assets/Resources/Atlas Base Textures/guns/noGun.psd
+  - Assets/Resources/Atlas Base Textures/guns/gun3.psd
+  lastBuildID: 20140529200851303
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024

@@ -6,15 +6,17 @@ public class gunLook : MonoBehaviour {
 
     public BoneAnimation boneAnimation;
     public AnimationStateSM animationState;
+    public Player playerRef;
 
     private Transform _armTransform;
     private Vector3 _armRotation;
-    private Vector3 _mouseOffset;
+    public Vector3 _mouseOffset;
     private Vector3 _transformScreenPosition;
 
 	// Use this for initialization
 	void Start () {
         _armTransform = boneAnimation.GetBoneTransform("arms");
+        //playerRef = GetComponent<Player>();
 
 	}
 	
@@ -35,6 +37,8 @@ public class gunLook : MonoBehaviour {
         Vector2 playerScreenPos = Camera.main.WorldToScreenPoint(_armTransform.position);
 
         _mouseOffset = (mousePos - playerScreenPos);
+        playerRef.aimVector = _mouseOffset.normalized;
+        
 
         float aimZ = Mathf.Atan2(_mouseOffset.y, _mouseOffset.x) * Mathf.Rad2Deg;
         aimZ -= 90;
