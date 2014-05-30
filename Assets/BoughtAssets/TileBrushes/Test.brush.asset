@@ -44,25 +44,5 @@ MonoBehaviour:
     _rotation: 0
     variations:
     - {fileID: 100000, guid: 6555d3e422a61d642b40dcdd1a31d40c, type: 2}
-  - mask: 64
-    _type: 0
-    _rotation: 0
-    variations:
-    - {fileID: 100000, guid: 6555d3e422a61d642b40dcdd1a31d40c, type: 2}
-  - mask: 2
-    _type: 0
-    _rotation: 0
-    variations:
-    - {fileID: 100000, guid: 6555d3e422a61d642b40dcdd1a31d40c, type: 2}
-  - mask: 82
-    _type: 0
-    _rotation: 0
-    variations:
-    - {fileID: 11400000, guid: 1f68c8ee39b1afa4b868d3039a1b5bc0, type: 2}
-  - mask: 74
-    _type: 0
-    _rotation: 0
-    variations:
-    - {fileID: 11400000, guid: 1f68c8ee39b1afa4b868d3039a1b5bc0, type: 2}
   _materialMappingFrom: []
   _materialMappingTo: []

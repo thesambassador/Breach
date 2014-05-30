@@ -5,13 +5,27 @@
 using System;
 
 using Rotorz.Tile;
+using UnityEngine;
 
 namespace Custom {
+
 
 	/// <summary>
 	/// Utility functions to assist with painting and erasing tile compositions.
 	/// </summary>
 	public static class TileCompositionUtility {
+
+        static GameObject _TileCompGraphic = new GameObject();
+        public static GameObject TileCompGraphic { 
+            get
+            { 
+                return _TileCompGraphic;
+            } 
+            set
+            {
+                _TileCompGraphic = value;
+            }
+        }
 
 		/// <summary>
 		/// Erase all grouped tiles which intersect tile composition.
@@ -90,7 +104,7 @@ namespace Custom {
 		/// <exception cref="System.ArgumentOutOfRangeException">
 		/// Thrown when specified index is outside bounds of tile system.
 		/// </exception>
-		public static void PaintComposition(this TileSystem system, TileIndex index, TileComposition composition) 
+		public static void PaintComposition(this TileSystem system, TileIndex index, TileComposition composition)
         {
 			if (system == null)
 				throw new ArgumentNullException("system");
@@ -160,6 +174,7 @@ namespace Custom {
                 CompositeTileGroup grp = compositeMap.GetGroupedTileIndices(new TileIndex(index.row - i, index.column));
                 if (grp != null)
                 {
+                   
                     // CompName = grp.CompositionName;
                     if (grp.CompositionName.Equals("RoomTest"))
                     {
@@ -173,6 +188,58 @@ namespace Custom {
         }
 
 
+        public static void ConnectRooms(this TileSystem system, TileIndex placedindex, String TypeOfPlacement)
+        {
+            var compositeMap = system.gameObject.GetComponent<CompositeTileMap>();
+            if (compositeMap == null)
+                compositeMap = system.gameObject.AddComponent<CompositeTileMap>();
+
+
+            //first we check what type of comp we are placing
+            if(TypeOfPlacement.Equals("Room"))
+            {
+                //since we PLACED a room, we only need to check the left and right walls to see if we need to connect to another room or corridor.
+                int indextotest = (placedindex.column - 1);
+                int MAXSIZEOFMAP = 1000;//FIX THIS SHIT ITS SET ELSEWHERE
+                if (indextotest >= 0 && indextotest <= MAXSIZEOFMAP)//if its not than 
+                {
+
+                    CompositeTileGroup CheckWestGroup = compositeMap.GetGroupedTileIndices(new TileIndex(placedindex.row, placedindex.column - 1));
+                    if (CheckWestGroup != null)
+                    { 
+                        //now we need to manually remove tiles in the composition we found, as well as tiles in the current composition
+                        system.EraseTile(placedindex.row+1, placedindex.column);
+                        system.EraseTile(placedindex.row+2, placedindex.column);
+
+                        system.EraseTile(placedindex.row+1, placedindex.column-1);
+                        system.EraseTile(placedindex.row+2, placedindex.column-1);
+
+                        //now that we have removed shit, we need to place objects(Doors)
+                        UnityEngine.Object objj = (UnityEngine.Object)Resources.Load("DynamicPrefabs/door", typeof(UnityEngine.Object));
+                         
+                       GameObject newobj = (GameObject) GameObject.Instantiate(objj);
+                       newobj.transform.position = new Vector2((placedindex.column), -(placedindex.row + 2));
+                       
+
+                    }
+
+                    CompositeTileGroup CheckEastGroup = compositeMap.GetGroupedTileIndices(new TileIndex(placedindex.row, placedindex.column + 1));
+                    if (CheckWestGroup != null)
+                    {
+                        if (CheckWestGroup.CompositionName.Equals("RoomTest"))
+                        {
+
+                        }
+                    }
+                    
+                }
+
+
+            }
+             
+
+        }
+        
 
 
 
