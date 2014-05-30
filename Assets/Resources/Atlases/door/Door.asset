@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 529336600, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: Door
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b90a1f0abcb08ba48957171da4461c46, type: 2}
+  uvs:
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: .5625
+    height: .5625
+  textureGUIDs:
+  - b138c0acff0bcae4a8d7ac97f81e3738
+  textureSizes:
+  - {x: 144, y: 144}
+  defaultPivotOffsets:
+  - {x: 0, y: 0}
+  textureNames:
+  - Door
+  texturePaths:
+  - Assets/Resources/Atlas Base Textures/door/Door.psd
+  lastBuildID: 20140529224957109
+  needsRebuilt: 0
+  dataVersion: 4
+  maxAtlasSize: 1024
+  padding: 1
+  forceSquare: 0

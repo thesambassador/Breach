@@ -215,7 +215,7 @@ namespace Custom {
                         system.EraseTile(placedindex.row+2, placedindex.column-1);
 
                         //now that we have removed shit, we need to place objects(Doors)
-                        UnityEngine.Object objj = (UnityEngine.Object)Resources.Load("DynamicPrefabs/door", typeof(UnityEngine.Object));
+                        UnityEngine.Object objj = (UnityEngine.Object)Resources.Load("DynamicPrefabs/ac_Door", typeof(UnityEngine.Object));
                          
                        GameObject newobj = (GameObject) GameObject.Instantiate(objj);
                        newobj.transform.position = new Vector2((placedindex.column), -(placedindex.row + 2));
