@@ -3,7 +3,17 @@ using System.Collections;
 
 public class UISlotDragDropItem : UIDragDropItem  {
     public SlotType slotType;
+    private bool _inSlot = false;
 
+    private Transform originalList; //list that this was originally part of, return to this list if we get dragged into empty space from a slot
+
+    protected override void Start()
+    {
+        base.Start();
+        originalList = mTrans.parent;
+    }
+
+    //most of this is copied from the OnDragDropRelease of UIDragDropItem, but I added some checks to the target container's slot type
     protected override void OnDragDropRelease(GameObject surface)
     {
         mTouchID = int.MinValue;
@@ -23,20 +33,24 @@ public class UISlotDragDropItem : UIDragDropItem  {
             // Container found -- parent this object to the container
             mTrans.parent = (container.reparentTarget != null) ? container.reparentTarget : container.transform;
 
-            Vector3 pos = mTrans.localPosition;
+            Vector3 pos = new Vector3(0,0,0);
             pos.z = 0f;
             mTrans.localPosition = pos;
+            this.cloneOnDrag = false;
+            this._inSlot = true;
         }
         else
         {
             if(!cloneOnDrag){
-            // No valid container under the mouse -- revert the item's parent
-                mTrans.parent = mParent;
+            // No valid container under the mouse -- set the item's parent back to the items panel
+                mTrans.parent = originalList;
             }
             else
             {
                 deleteClone = true;
             }
+
+            this._inSlot = false;
         }
 
         // Update the grid and table references

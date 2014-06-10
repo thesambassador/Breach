@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
-    public List<BaseItem> items;
+    public List<EquippableItem> items;
     public EquippableItem activeItem;
 
     public GameObject parentObject;
@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour {
     void Start()
     {
         parentObject = this.gameObject;
-        items = new List<BaseItem>();
+        items = new List<EquippableItem>();
         GenGun("gun1", Color.blue, true, .15f);
         GenGun("gun2", Color.green, true, .05f);
         GenGun("gun3", Color.red, false, .1f);
@@ -31,18 +31,15 @@ public class Inventory : MonoBehaviour {
         weapon.usable = true;
         weapon.projectile = Resources.Load("DynamicPrefabs/basicBullet");
         weapon.bulletColor = color;
-
+       
         AddItem(weapon);
     }
 
     void Update()
     {
-        foreach (BaseItem item in items)
+        foreach (EquippableItem item in items)
         {
-            if (item is EquippableItem)
-            {
-                (item as EquippableItem).Update();
-            }
+            (item as EquippableItem).Update();
         }
 
         if (Input.GetMouseButton(0))
@@ -66,7 +63,8 @@ public class Inventory : MonoBehaviour {
         
     }
 
-    public void AddItem(BaseItem item){
+    public void AddItem(EquippableItem item)
+    {
         items.Add(item);
 
         //If we don't have anything equipped, and the added item is equippable and usable, equip it
