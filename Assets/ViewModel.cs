@@ -6,17 +6,15 @@ public class ViewModel : MonoBehaviour
     public NguiRootContext View;
     public ArmoryContext Context;
     public Transform SelectionDisplay;
+    public UIGrid Grid;
 
     void Awake()
     {
-        Context = new ArmoryContext(SelectionDisplay);
+        Context = new ArmoryContext(SelectionDisplay, Grid);
         View.SetContext(Context);
 
         GenGun("gun1", "Screw", Color.blue, true, .15f);
         GenGun("gun2", "Emoticon - Skull", Color.red, true, .5f);
-
-        
-
 
     }
 
@@ -40,6 +38,12 @@ public class ViewModel : MonoBehaviour
 
     void Update()
     {
-        Context.SelectedItemDescriptionProp.SetValue("TEST TEST TEST");
+        
+    }
+
+    public void OnClick()
+    {
+        GenGun("gun3", "Emoticon - Skull", Color.blue, true, .5f);
+        //Context.SelectedItemDescription = "BLA BLA BLA";
     }
 }

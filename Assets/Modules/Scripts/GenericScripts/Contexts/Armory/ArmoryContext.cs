@@ -7,31 +7,27 @@ public class ArmoryContext : EZData.Context{
     public EZData.Collection<EquippableItem> AvailableItems { get { return _availableItems; } }
 
     //Item that is currently selected in the items list or maybe an equipped item, shows description in the info panel
-    public readonly EZData.VariableContext<EquippableItem> SelectedItemProperty = new EZData.VariableContext<EquippableItem>(null);
+    //private readonly EZData.VariableContext<EquippableItem> _selectedItemProperty = new EZData.VariableContext<EquippableItem>(null);
+    public readonly EZData.VariableContext<EquippableItem> SelectedItemEzVariableContext = new EZData.VariableContext<EquippableItem>(null);
     public EquippableItem SelectedItem
     {
-        get { return SelectedItemProperty.Value; }
-        set { SelectedItemProperty.Value = value; }
+        get { return SelectedItemEzVariableContext.Value; }
+        set { SelectedItemEzVariableContext.Value = value; }
     }
 
-    public readonly EZData.StringProperty SelectedItemDescriptionProp = new EZData.StringProperty();
-    public string SelectedItemDescription
-    {
-        get { return SelectedItemDescriptionProp.GetValue(); }
-        set { 
-            SelectedItemDescriptionProp.SetValue(value);
-        }
-    }
 
-    public Transform SelectionDisplay;
 
-    public ArmoryContext(Transform selectionDisplay)
+    public Transform selectionDisplay;
+    public UIGrid grid;
+
+    public ArmoryContext(Transform selectionDisplay, UIGrid grid)
     {
         EquippableItem item = new EquippableItem();
-        item.Description = "This is some text about the item!";
+        item.Description = "initial text";
         SelectItem(item);
 
-        
+        this.selectionDisplay = selectionDisplay;
+        this.grid = grid;
 
         //SelectionDisplay = selectionDisplay;
     }
@@ -45,10 +41,9 @@ public class ArmoryContext : EZData.Context{
     public void SelectItem(EquippableItem item)
     {
         SelectedItem = item;
-        SelectedItemDescriptionProp.SetValue(item.Description);
-        //SelectedItem.Description = item.Description;
+        
+        
 
-        Debug.Log(SelectedItemDescription);
     }
 
 
